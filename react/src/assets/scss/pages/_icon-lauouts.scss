@@ -1,0 +1,98 @@
+/**  =====================
+      Icon layouts css start
+==========================  **/
+
+.i-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 0;
+
+  .i-block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 6px;
+    background-color: var(--bs-body-bg);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+
+    // For both font icons and SVG icons
+    i, svg {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+      transition: transform 0.2s ease;
+      color: var(--bs-body-color);
+    }
+
+    // Special case for Material Icons
+    .material-icons-two-tone {
+      font-size: 28px;
+    }
+
+    // Hover and active states
+    &:hover {
+      border-color: var(--bs-primary);
+      background-color: rgba(var(--bs-primary-rgb), 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+      i, svg {
+        transform: scale(1.1);
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    // Copied state
+    &.copied {
+      background-color: rgba(var(--bs-success-rgb), 0.1);
+      border-color: var(--bs-success);
+    }
+
+    // Copy badge
+    span.ic-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: var(--bs-success);
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 10px 0 0 0;
+      font-weight: 500;
+      animation: fadeIn 0.3s ease;
+    }
+
+    // Hidden label (if needed for accessibility)
+    label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+}
+
+// Animation for copy badge
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/**====== Icon layouts css end ======**/

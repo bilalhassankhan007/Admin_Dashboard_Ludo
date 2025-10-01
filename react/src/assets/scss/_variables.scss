@@ -1,0 +1,14 @@
+// Light theme
+:root, [data-bs-theme="light"] {
+  --bs-body-color: #212529;
+  --bs-card-bg: #ffffff;
+  --bs-border-color: #dee2e6;
+}
+
+// Dark theme
+[data-bs-theme="dark"] {
+  --bs-body-color: #adb5bd;
+  --bs-card-bg: #2b3035;
+  --bs-border-color: #495057;
+  --bs-body-bg: #212529;
+}
